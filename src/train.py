@@ -2,7 +2,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from preprocess import load_and_preprocess
-from features import fit_vectorizer
+from src.features import fit_vectorizer
 
 df = load_and_preprocess("data/tweets.csv")
 X, vec = fit_vectorizer(df["clean_text"])
