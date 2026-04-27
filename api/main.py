@@ -10,4 +10,4 @@ class InputData(BaseModel):
 @app.post("/predict")
 def troll_prediction(data: InputData):
     result = predict(data.text)
-    return {"troll": bool(result)}
+    return {"prediction": int(result)}

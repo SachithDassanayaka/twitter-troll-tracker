@@ -20,13 +20,29 @@ This project detects trolls and malicious accounts on Twitter/X using Natural La
 ##Folder Structure
 ```text
 twitter-troll-tracker/
-├── api/                    # FastAPI app
-├── src/                    # Scripts (collect, preprocess, features, train, predict, evaluate)
-├── models/                 # Trained models
-├── tests/                  # Unit tests
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── .github/workflows/ci.yml # GitHub Actions CI
+│
+├── api/
+│   ├── main.py
+│   └── schemas.py
+│
+├── src/
+│   ├── predict.py
+│   ├── features.py
+│   └── train.py
+│
+├── models/
+│   └── model.pkl (NOT committed to git in production)
+│
+├── tests/
+│   └── test_api.py
+│
+├── requirements.txt
+├── .gitignore
+├── README.md
+├── Dockerfile
+└── .github/
+    └── workflows/
+        └── ci.yml
 ```
 
 ## Run API

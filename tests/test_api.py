@@ -9,4 +9,4 @@ def test_predict(mock_predict):
     mock_predict.return_value = 1
     response = client.post("/predict", json={"text": "We provide live news updates about BLM violations"})
     assert response.status_code == 200
-    assert response.json() == {"troll": True}
+    assert response.json() == {"prediction": 1}
