@@ -4,9 +4,9 @@ from unittest.mock import patch
 
 client = TestClient(app)
 
-@patch("src.predict.predict")
+@patch("api.main.predict")
 def test_predict(mock_predict):
     mock_predict.return_value = 1
-    response = client.post("/predict", json={"text": "this is a troll"})
+    response = client.post("/predict", json={"text": "We provide live news updates about BLM violations"})
     assert response.status_code == 200
     assert response.json() == {"troll": True}
